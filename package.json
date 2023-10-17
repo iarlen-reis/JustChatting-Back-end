@@ -23,12 +23,15 @@
     "fastify-socket.io": "^4.0.0",
     "prisma": "^5.3.1",
     "socket.io": "^4.7.2",
+    "tsup": "^7.2.0",
     "uuid": "^9.0.1",
     "zod": "^3.22.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup src",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
