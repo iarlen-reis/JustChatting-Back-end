@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "engines": {
-    "node": 18
+    "node": "18"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
