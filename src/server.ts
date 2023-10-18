@@ -28,6 +28,7 @@ class Server {
       cors: {
         origin: ['https://justchatting.iarlenreis.com.br'],
         methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+        allowedHeaders: ['Content-Type', 'Access-Control-Allow-Origin'],
       },
     })
     this.userRoutes = new UserRoutes(this.app)
