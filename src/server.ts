@@ -21,12 +21,12 @@ class Server {
   constructor() {
     this.app = fastify()
     this.app.register(fastifyCors, {
-      origin: ['https://justchatting.iarlenreis.com.br'],
+      origin: '*',
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     })
     this.app.register(socket, {
       cors: {
-        origin: ['https://justchatting.iarlenreis.com.br'],
+        origin: '*',
         methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
         allowedHeaders: ['Content-Type', 'Access-Control-Allow-Origin'],
       },
