@@ -28,7 +28,6 @@ class Server {
       cors: {
         origin: '*',
         methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
-        allowedHeaders: ['Content-Type', 'Access-Control-Allow-Origin'],
       },
     })
     this.userRoutes = new UserRoutes(this.app)
@@ -84,7 +83,7 @@ class Server {
     this.routes()
     this.socket()
 
-    this.app.listen({ port: PORT as number }, () => {
+    this.app.listen({ port: PORT as number, host: '0.0.0.0' }, () => {
       console.log(`Server running on port ${PORT}`)
     })
   }
